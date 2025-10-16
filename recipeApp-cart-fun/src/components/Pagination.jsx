@@ -7,6 +7,7 @@ const Pagination = () => {
         await fetchProducts(newPage);
         setPage(newPage);
     }
+    
     return (
         <>
             <div className='flex justify-center items-center gap-3 mt-5'>
