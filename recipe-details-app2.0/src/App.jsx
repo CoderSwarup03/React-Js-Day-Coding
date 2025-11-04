@@ -12,7 +12,7 @@ const App = () => {
           <Header />
           <Routes>
             <Route path='/' element={<RecipeList />} />
-            <Route path='/submit' element={<RecipeDetails />}/>
+            <Route path='/recipe/:id' element={<RecipeDetails />}/>
           </Routes>
         </div>
       </Router>

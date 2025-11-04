@@ -6,7 +6,7 @@ const RecipeList = () => {
         {
             id: 1,
             name: "Lutchi-Paneer",
-            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhhgrP4xoJk74jdoOFF693TAdc5n_2mG94cWiPsH1i6Uq1Lm8poKuKrj8l-usNlGyG8Hs&usqp=CAU",
+            img: 'https://i.ytimg.com/vi/53J5KYwLREY/maxresdefault.jpg',
             desc: "Bengali Special Lutchi Paneer"
         },
         {
@@ -25,11 +25,11 @@ const RecipeList = () => {
 
     return (
         <>
-            <div className='flex justify-center items-center gap-3'>
-                <div className='grid grid-col-1 md:grid-cols-2 lg:grid-cols-3'>
+            <div className='flex justify-center mt-10 my-2 mx-1'>
+                <div className='grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
                     {recipe.map((item) => {
                         return (
-                            <RecipeItem  key={item.id} name={item.name} img={item.img} desc={item.desc}/>
+                            <RecipeItem key={item.id} item={item} />
                         )
                     })}
                 </div>
