@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import RecipeProvider from '../context/RecipeProvider'
+import Navbar from '../components/Navbar'
 const Home = () => {
   const { products, addToCart } = useContext(RecipeProvider)
 
@@ -20,9 +21,9 @@ const Home = () => {
                       <span className='text-md font-semibold'>{item.brand}</span>
                     </div>
                     <div>
-                      <button 
-                      onClick={() => addToCart(item)}
-                      className='text-lg font-bold px-3 py-2 rounded-md bg-green-500 hover:bg-green-600 cursor-pointer'>Add To Cart</button>
+                      <button
+                        onClick={() => addToCart(item)}
+                        className='text-lg font-bold px-3 py-2 rounded-md bg-green-500 hover:bg-green-600 cursor-pointer'>Add To Cart</button>
                     </div>
                   </div>
                 </div>

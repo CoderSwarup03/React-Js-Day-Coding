@@ -9,7 +9,7 @@ const ContextProvider = ({ children }) => {
         setCart((prev) => {
             const itemExist = prev.find((item) => item.id === product.id);
             if (itemExist) {
-                return prev.map((item) => {
+                return prev.map((item) => {  
                     return (
                         item.id === product.id ? { ...item, qty: item.qty + 1 } : item
                     )
