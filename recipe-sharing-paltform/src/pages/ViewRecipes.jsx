@@ -1,6 +1,7 @@
 // ViewRecipes.jsx
 import React from "react";
 import { useRecipe } from "../context/RecipeContext";
+import { Link } from "react-router-dom";
 
 export default function ViewRecipes() {
   const { recipes } = useRecipe();
@@ -15,12 +16,14 @@ export default function ViewRecipes() {
           {recipes.map((recipe, index) => (
             <div key={index} className="p-4 border rounded-lg shadow-md">
               <h3 className="text-xl font-semibold">{recipe.title}</h3>
+              <img src={recipe.url} alt={recipe.title} />
               <p className="text-gray-600">{recipe.description}</p>
               <p className="mt-2"><strong>Ingredients:</strong> {recipe.ingredients}</p>
             </div>
           ))}
         </div>
       )}
+      <Link to={'/'} className="hover:underline text-blue-500">back to home</Link>
     </div>
   );
 }

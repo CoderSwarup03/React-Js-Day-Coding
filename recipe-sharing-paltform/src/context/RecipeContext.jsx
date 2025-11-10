@@ -1,4 +1,3 @@
-// RecipeContext.js
 import React from "react";
 import { createContext, useState, useContext } from "react";
 
@@ -12,7 +11,7 @@ export const RecipeProvider = ({ children }) => {
   };
 
   return (
-    <RecipeContext.Provider value={{ recipes, addRecipe }}>
+    <RecipeContext.Provider value={{ recipes, addRecipe }}>  
       {children}
     </RecipeContext.Provider>
   );
