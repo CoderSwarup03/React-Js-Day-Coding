@@ -11,7 +11,7 @@ const Navbar = ({ setProduct }) => {
 
 return (
     <>
-        <div className='bg-gray-50 p-4 border-b border-green-500 sticky top-0'>
+        <div className='bg-gray-50 p-4 border-b border-green-500 sticky top-0 w-full' >
             <div className='max-w-6xl mx-auto flex justify-between'>
                 <h1 className='text-lg font-bold text-green-500 cursor-pointer'>FlexFit</h1>
                 <div className='flex items-center gap-2'>
