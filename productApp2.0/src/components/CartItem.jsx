@@ -20,7 +20,6 @@ const CartItem = ({ item }) => {
                         <div className='flex gap-3 items-center px-3 py-1 border border-green-500 rounded-md'>
                             <button>
                                 <CiSquareMinus
-
                                     onClick={() => { item.quantity > 1 && Decrement(item.id) }}
                                 />
                             </button>

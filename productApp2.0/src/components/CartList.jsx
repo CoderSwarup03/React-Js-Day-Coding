@@ -12,7 +12,7 @@ const CartList = () => {
     const totalPrice = Math.round(cart.reduce((acc, item) => acc + item.price * item.quantity, 0))
     return (
         <>
-            <div className={`right-3 top-[10vh] border-2 border-green-500 w-[400px] h-[80vh] bg-gray-50 fixed Z-100 ${toggleCart ? 'block' : 'hidden'}`}>
+            <div className={`right-3 top-[10vh] border-2 border-green-500 w-[400px] h-[90vh] bg-gray-50 fixed z-50 ${toggleCart ? 'block' : 'hidden'}`}>
                 <div className='flex justify-between mx-3 border-b-2 border-green-500 p-3'>
                     <h1 className='text-2xl font-bold text-green-500'>MyCart</h1>
                     <button>
@@ -23,7 +23,7 @@ const CartList = () => {
                 </div>
 
                 {/* cart list added here */}
-                <div className='h-[65vh] border-2 border-green-500 overflow-y-scroll'>
+                <div className='h-[65vh] overflow-y-scroll'>
                     {cart.length === 0 ? (
                         <h1 className='text-xl font-bold text-center'>Cart is empty</h1>
                     ) : (
@@ -46,7 +46,7 @@ const CartList = () => {
                             <span className='text-xl font-bold text-green-500'>₹{totalPrice}</span>
                         </div>
                     </div>
-                    <button className='w-full bg-green-500 hover:bg-green-600 text-white font-bold text-xl'>Place Order</button>
+                    <button className='w-full bg-green-500 hover:bg-green-600 text-white font-bold text-xl cursor-pointer'>Place Order</button>
                 </div>
             </div>
             <div className='right-4 bottom-4 fixed'>
