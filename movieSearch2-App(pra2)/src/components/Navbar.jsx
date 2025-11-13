@@ -20,7 +20,7 @@ const Navbar = ({ handleSearch }) => {
   return (
     <>
       <div className='bg-gray-50 border-b-2 border-green-500'>
-        <div className='flex justify-between max-w-6xl mx-auto items-center p-4'>
+        <div className='flex flex-col md:flex-row justify-between max-w-6xl mx-auto items-center p-4'>
           <h1 className='text-2xl font-bold text-green-500'>MovieSearch</h1>
           <div className='flex gap-2'>
             <input
@@ -28,7 +28,7 @@ const Navbar = ({ handleSearch }) => {
               onChange={(e) => setInput(e.target.value)}
               onSubmit={() => inputSubmit()}
               placeholder='Enter your fav movie...'
-              className='outline-none border-2 border-green-500 hover:border-green-600 rounded-md px-3 py-2 w-[300px] text-lg font-semibold'
+              className='outline-none border-2 border-green-500 hover:border-green-600 rounded-md px-3 py-2 w-[150px] md:w-[300px] text-lg font-semibold'
               type="search" name="" id="" />
             <button
               onClick={() => searchInp()}
