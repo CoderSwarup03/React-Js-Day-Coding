@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
+
 const Navbar = ({ setProducts }) => {
     const [input, setInput] = useState('');
-
-
 
     const handleSearch = async () => {
         const response = await fetch(`https://dummyjson.com/products/search?q=${input}`);
